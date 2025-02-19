@@ -28,7 +28,7 @@ type HousingMap struct {
 	housingMap [][]bool
 	visited    [][]bool
 
-	complexes map[Cursor][]Cursor
+	complexes []int
 }
 
 func NewHousingMap(s *bufio.Scanner) *HousingMap {
@@ -60,7 +60,7 @@ func NewHousingMap(s *bufio.Scanner) *HousingMap {
 		size:       size,
 		housingMap: housingMap,
 		visited:    visited,
-		complexes:  make(map[Cursor][]Cursor),
+		complexes:  make([]int, 0, size*size),
 	}
 }
 
@@ -74,9 +74,11 @@ func (hm *HousingMap) IsValidHouse(c Cursor) bool {
 		hm.housingMap[c[0]][c[1]]
 }
 
-func (hm *HousingMap) SearchAdjacentHouse(start Cursor) {
+func (hm *HousingMap) SearchAdjacent(start Cursor) int {
 	queue := make(chan Cursor, hm.size*hm.size)
 	queue <- start
+
+	count := 0
 	hm.visited[start[0]][start[1]] = true
 
 	for len(queue) > 0 {
@@ -90,8 +92,10 @@ func (hm *HousingMap) SearchAdjacentHouse(start Cursor) {
 			}
 		}
 
-		hm.complexes[start] = append(hm.complexes[start], v)
+		count++
 	}
+
+	return count
 }
 
 func solve(hm *HousingMap) []int {
@@ -101,17 +105,12 @@ func solve(hm *HousingMap) []int {
 			if hm.IsVisited(c) || !house {
 				continue
 			}
-			hm.SearchAdjacentHouse(c)
+			hm.complexes = append(hm.complexes, hm.SearchAdjacent(c))
 		}
 	}
 
-	var result []int
-	for _, houseComplex := range hm.complexes {
-		result = append(result, len(houseComplex))
-	}
-	sort.Ints(result)
-
-	return result
+	sort.Ints(hm.complexes)
+	return hm.complexes
 }
 
 func main() {
