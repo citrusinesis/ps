@@ -16,5 +16,5 @@
 ## Dynamic Programming
 - [RGB거리](./1149/)
 
-## Greddy
+## Greedy
 - [회의실 배정](./1931/)
