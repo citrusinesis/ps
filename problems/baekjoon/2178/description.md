@@ -76,6 +76,9 @@ N×M크기의 배열로 표현되는 미로가 있다.
 ```
 
 ## 알고리즘 분류
-- 그래프 이론
-- 그래프 탐색
-- 너비 우선 탐색
+- [그래프 이론](../index.md#graph)
+- [그래프 탐색](../index.md#graph)
+- [너비 우선 탐색](../index.md#bfs)
+
+### Reference
+- [Problem Link](https://www.acmicpc.net/problem/2178)

@@ -34,5 +34,8 @@
 (1,4), (5,7), (8,11), (12,14) 를 이용할 수 있다.
 
 ## 알고리즘 분류
-- 그리디 알고리즘
-- 정렬
+- [그리디 알고리즘](../index.md#greddy)
+- [정렬](../index.md#sort)
+
+### Reference
+- [Problem Link](https://www.acmicpc.net/problem/1931)

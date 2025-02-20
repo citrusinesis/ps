@@ -32,7 +32,10 @@
 ```
 
 ## 알고리즘 분류
-- 그래프 이론
-- 그래프 탐색
-- 너비 우선 탐색
-- 깊이 우선 탐색
+- [그래프 이론](../index.md#graph) 
+- [그래프 탐색](../index.md#graph)
+- [너비 우선 탐색](../index.md#bfs)
+- 깊이 우선 탐색 (not solve in dfs)
+- 
+### Reference
+- [Problem Link](https://www.acmicpc.net/problem/2667)
