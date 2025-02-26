@@ -67,3 +67,6 @@ sogangsookmyungyonseiewhahongik
 - 그래프 탐색
 - 깊이 우선 탐색
 - 연결 리스트
+
+### Reference
+- [Problem Link](https://www.acmicpc.net/problem/31423)
