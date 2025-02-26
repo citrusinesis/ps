@@ -65,7 +65,7 @@ sogangsookmyungyonseiewhahongik
 - [그래프 이론](../index.md#graph)
 - 문자열
 - 그래프 탐색
-- 깊이 우선 탐색
+- [깊이 우선 탐색](../index.md#dfs)
 - 연결 리스트
 
 ### Reference
