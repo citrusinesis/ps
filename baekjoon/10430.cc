@@ -3,14 +3,14 @@
 using namespace std;
 
 int main() {
-    int A, B, C;
+  int A, B, C;
 
-    cin >> A >> B >> C;
+  cin >> A >> B >> C;
 
-    cout << (A + B) % C << '\n'
-         << ((A % C) + (B % C)) % C << '\n'
-         << (A * B) % C << '\n'
-         << ((A % C) * (B % C)) % C << '\n';
+  cout << (A + B) % C << '\n'
+       << ((A % C) + (B % C)) % C << '\n'
+       << (A * B) % C << '\n'
+       << ((A % C) * (B % C)) % C << '\n';
 
-    return 0;
+  return 0;
 }

@@ -8,30 +8,30 @@
 using namespace std;
 
 int main() {
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-    ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  ios_base::sync_with_stdio(false);
 
-    size_t N;
-    cin >> N;
+  size_t N;
+  cin >> N;
 
-    priority_queue<int, vector<int>, greater<int>> heap;
+  priority_queue<int, vector<int>, greater<int>> heap;
 
-    int input;
-    for (size_t i = 0; i < N; i++) {
-        cin >> input;
+  int input;
+  for (size_t i = 0; i < N; i++) {
+    cin >> input;
 
-        if (!input) {
-            if (heap.empty()) {
-                cout << 0 << '\n';
-            } else {
-                cout << heap.top() << '\n';
-                heap.pop();
-            }
-        } else {
-            heap.push(input);
-        }
+    if (!input) {
+      if (heap.empty()) {
+        cout << 0 << '\n';
+      } else {
+        cout << heap.top() << '\n';
+        heap.pop();
+      }
+    } else {
+      heap.push(input);
     }
+  }
 
-    return 0;
+  return 0;
 }
