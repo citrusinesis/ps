@@ -1,8 +1,25 @@
-.idea/
-.vscode/
+# Ignore everything by default
+*
 
-*.dSYM
-cmake-build-debug
+# Allow .cc files (C++ source files)
+!*.cc
 
-.clang-format
-CMakeLists.txt
+# Allow .md files (Markdown files)
+!*.md
+
+# Allow .sh files (Shell scripts)
+!*.sh
+
+# Allow directories (so we can traverse into them)
+!*/
+
+# Optional: Allow common project files you might want to include
+# Uncomment these lines if needed:
+# !README
+# !LICENSE
+# !Makefile
+# !CMakeLists.txt
+# !.gitignore
+
+# Note: This .gitignore itself will be ignored unless you add:
+# !.gitignore
